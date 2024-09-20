@@ -1,30 +1,73 @@
 # Church Database Management System (DBMS)
 
-This project is a **Church Database Management System (DBMS)** built using Node.js and Express on the backend, and HTML, CSS, and JavaScript on the frontend. The system allows users to manage congregants, record attendance, create events, and track event attendance.
+This project is a Church DBMS built with:
+* **Backend:** Node.js, Express, Sequelize, MySQL
+* **Frontend:** HTML, CSS, JavaScript
 
-## Features
+## Features:
+* **Congregants:** Add, update, and manage details.
+* **Attendance:** Record attendance by date.
+* **Events:** Create and manage church events.
+* **Event Attendance:** Track attendees for specific events.
 
-- **Congregants Management**: Add, update, and manage congregant details.
-- **Attendance Tracking**: Record attendance for congregants by date.
-- **Event Management**: Add and manage church events.
-- **Event Attendance**: Track which congregants attended specific events.
+## Prerequisites:
+* Node.js (v12 or higher)
+* MySQL (or compatible database)
 
-## Technologies Used
+## Setup:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/church-dbms.git
+   cd church-dbms
+   ```
 
-- **Backend**: Node.js, Express, Sequelize, MySQL
-- **Frontend**: HTML, CSS, JavaScript
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-## Prerequisites
+3. Configure the database:
+   * Create a database named `church_db` (or your choice).
+   * Update `config/config.json` with your MySQL credentials.
 
-To run this project locally, you will need to have the following installed:
+4. Run migrations:
+   ```bash
+   npx sequelize db:migrate
+   ```
 
-- **Node.js** (v12 or higher)
-- **MySQL** (or any MySQL-compatible database)
+5. Start the server:
+   ```bash
+   npm start
+   ```
 
-## Setup Instructions
+**Access http://localhost:3000**
 
-### 1. Clone the Repository
+## Project Structure:
+```
+church-dbms/
+├── config/        (Database config)
+├── migrations/    (Sequelize migrations)
+├── models/        (Sequelize database models)
+├── public/        (Public assets)
+│   ├── css/
+│   ├── js/
+│   └── index.html
+├── routes/        (Express route handlers)
+└── server.js      (Main server file)
+└── package.json   (Dependencies and scripts)
+```
 
-```bash
-git clone https://github.com/your-username/church-dbms.git
-cd church-dbms
+## API Endpoints:
+* **Congregants:**
+   * GET /congregants: Get all congregants
+   * POST /congregants: Add a new congregant
+* **Attendance:** POST /attendance: Record attendance
+* **Events:** POST /events: Add a new event
+* **Event Attendance:** POST /event-attendance: Record attendance
+
+## License:
+MIT (See LICENSE file)
+
+## Contact:
+* Email: your.email@example.com
+* GitHub: your-username
