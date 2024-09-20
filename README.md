@@ -69,5 +69,5 @@ church-dbms/
 MIT (See LICENSE file)
 
 ## Contact:
-* Email: your.email@example.com
-* GitHub: your-username
+* Email: plastalbotbuilders@gmail.com
+* GitHub: https://github.com/Plastal-Bot-Builders
